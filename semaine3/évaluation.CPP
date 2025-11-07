@@ -52,7 +52,7 @@ int abs (int valeur)
 }
 int attack(std::string atk, int puissance, std::string def)
 {
- if (atk == "electrik" )
+ if (atk == "electric" )
 	{
 	if (def == "water")
 	{
