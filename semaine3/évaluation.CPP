@@ -86,4 +86,5 @@ int attack(std::string atk, int puissance, std::string def)
 			return puissance;
 		}
 	}
+	return 200;
 }
