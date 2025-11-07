@@ -52,11 +52,11 @@ int abs (int valeur)
 }
 int attack(std::string atk, int puissance, std::string def)
 {
-
-	if (atk == "electrik" )
+ if (atk == "electrik" )
 	{
 	if (def == "water")
 	{
+		std::cout <<"foudre dans l'eau";
 	    return puissance * 2 ;
 	}
 	else
