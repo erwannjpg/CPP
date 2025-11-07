@@ -1,7 +1,7 @@
 #include <iostream>
 
 struct item ;
-struct player ;
+struct Player ;
 enum class Itemtype;
 enum class Hand;
 enum class ItemType {
@@ -21,7 +21,7 @@ struct Item
 	ItemType type;
 	int durability = 100;
 	int quality = 100;
-	player *owner = nullptr;
+	Player *owner = nullptr;
 };
 struct Player
 {
@@ -122,7 +122,7 @@ void displayplayer(Player &player)
 }
  void Grab (Player &player ,Item &item ,Hand hand)
 {
-	if (item.owner!=nullptr && item.owner != player)
+	if (item.owner!=nullptr && item.owner != &player)
 	{
 		 return  ;
 	}
@@ -132,7 +132,7 @@ void displayplayer(Player &player)
 		if (player.leftHand == nullptr )
 		{
 			player.leftHand = &item;
-			item.owner = player;
+			item.owner = &player;
 			
 		}
 	}
@@ -142,7 +142,7 @@ void displayplayer(Player &player)
 		if(player.rightHand == nullptr);
 	{
 		player.rightHand = &item;
-		item.owner = player;
+		item.owner = &player;
 	}
 }
 	if (hand == Hand::Both){
@@ -150,7 +150,7 @@ void displayplayer(Player &player)
 		{
 			player.rightHand = &item;
 			player.leftHand = &item;
-			item.owner = player;
+			item.owner = &player;
 		}
 }
 
