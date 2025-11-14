@@ -116,7 +116,7 @@ void displayplayer(Player &player)
 	}
 	else
 	{
-		std::cout << "main gauche possède " << std::endl;
+		std::cout << "main gauche possede " << std::endl;
 		displayitem(*player.rightHand);
 	}
 }
@@ -170,7 +170,7 @@ void Drop(Player &player, Hand hand)
 	if (hand == Hand::Left)
 	{
 		if (player.rightHand != nullptr)
-			;
+			
 		{
 			player.rightHand->owner = nullptr;
 			player.rightHand = nullptr;
